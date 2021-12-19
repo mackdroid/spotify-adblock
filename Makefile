@@ -29,7 +29,7 @@ install: $(BINARY_PATH) $(CONFIG_PATH)
 	install -D --mode=644 $(CONFIG_PATH) $(CONFIG_TARGET)
 
 .PHONY: flatpak
-install: $(BINARY_PATH) $(CONFIG_PATH)
+flatpak: $(BINARY_PATH) $(CONFIG_PATH)
 	install -D --mode=644 --strip $(BINARY_PATH) $(FBINARY_TARGET) 
 	install -D --mode=644 $(CONFIG_PATH) $(FCONFIG_TARGET) 
 
