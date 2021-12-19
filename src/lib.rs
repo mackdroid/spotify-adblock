@@ -45,7 +45,7 @@ lazy_static! {
     static ref CONFIG: Config = {
         let config_paths = vec![
             PathBuf::from("config.toml"),
-            PathBuf::from("/app/etc/spotify-adblock/config.toml"),
+            PathBuf::from("/app/etc/spotify-adblock/config.toml"), // for flatpak
             #[allow(deprecated)] // std::env::home_dir() is only broken on Windows
             std::env::home_dir().unwrap().join(".config/spotify-adblock/config.toml"),
             PathBuf::from("/etc/spotify-adblock/config.toml"),
